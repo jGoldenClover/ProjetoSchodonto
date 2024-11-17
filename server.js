@@ -11,11 +11,14 @@ const helmet = require("helmet");
 app.use(helmet.contentSecurityPolicy({
     directives: {
     // os links default serão entregues pelo próprio arquivo ("self")
-      defaultSrc: ["'none'"], 
+      defaultSrc: ["'self'"], 
     // o link de script secundário é o cdn que vai fazer a conexão com o supabase
       scriptSrc: ["'self'" , "https://cdn.jsdelivr.net" , "https://vercel.live"], 
+    // Permite scripts carregados diretamente como elementos (script tags)
+    scriptSrcElem: ["'self'", "https://cdn.jsdelivr.net", "https://vercel.live"],
     // o link de css são o do próprio supabase e o de fontes do google
       styleSrc: ["'self'" , "https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
+
     // o link de outras conexões
       connectSrc: ["'self'" , "https://brioutndycetdzaqsxka.supabase.co"],
       imgSrc: ["'self'"],
