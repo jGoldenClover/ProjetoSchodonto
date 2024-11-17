@@ -3,10 +3,18 @@ const app = express();
 const path = require('path')
 const cors = require('cors');
 app.use(cors());
-
+const helmet = require("helmet");
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+    defaultSrc: ["'self'"], 
+      scriptSrc: ["'self'", "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"], 
+      styleSrc: ["'self'"],
+      imgSrc: ["'self'"], 
+    },
+    
+}))
 
 app.set('view engine' , 'ejs')
 PORT = 3000

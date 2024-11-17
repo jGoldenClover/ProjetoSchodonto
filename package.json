@@ -7,14 +7,15 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "start" : "node server.js",
+    "start": "node server.js",
     "devStart": "nodemon server.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.46.1",
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "helmet": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
