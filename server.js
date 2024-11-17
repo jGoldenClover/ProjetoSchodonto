@@ -5,28 +5,28 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const helmet = require("helmet");
+// const helmet = require("helmet");
 
 // esse helmet funciona como um link secundário para conectar o ejs com os links externos (o supabase , o cdn que usa para conectar o supabase e etc)
-app.use(helmet.contentSecurityPolicy({
-    directives: {
-    // os links default serão entregues pelo próprio arquivo ("self")
-      defaultSrc: ["'self'"], 
-    // o link de script secundário é o cdn que vai fazer a conexão com o supabase
-      scriptSrc: ["'self'" , "https://cdn.jsdelivr.net" , "https://vercel.live"], 
+// app.use(helmet.contentSecurityPolicy({
+//     directives: {
+//     // os links default serão entregues pelo próprio arquivo ("self")
+//       defaultSrc: ["'self'"], 
+//     // o link de script secundário é o cdn que vai fazer a conexão com o supabase
+//       scriptSrc: ["'self'" , "https://cdn.jsdelivr.net" , "https://vercel.live"], 
 
-    // Permite scripts carregados diretamente como elementos (script tags)
-    scriptSrcElem: ["'self'", "https://cdn.jsdelivr.net", "https://vercel.live"],
+//     // Permite scripts carregados diretamente como elementos (script tags)
+//     scriptSrcElem: ["'self'", "https://cdn.jsdelivr.net", "https://vercel.live"],
     
-    // o link de css são o do próprio supabase e o de fontes do google
-      styleSrc: ["'self'" , "https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
+//     // o link de css são o do próprio supabase e o de fontes do google
+//       styleSrc: ["'self'" , "https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
 
-    // o link de outras conexões
-      connectSrc: ["'self'" , "https://brioutndycetdzaqsxka.supabase.co"],
-      imgSrc: ["'self'"],
-    },
+//     // o link de outras conexões
+//       connectSrc: ["'self'" , "https://brioutndycetdzaqsxka.supabase.co"],
+//       imgSrc: ["'self'"],
+//     },
     
-}))
+// }))
 
 app.set('view engine' , 'ejs')
 PORT = 3000
@@ -36,17 +36,20 @@ PORT = 3000
 app.get('/' , (req , res) =>{
     res.sendFile(path.join(__dirname, "public", "index.html"));
 }) 
-app.get('/cadastro' , (req , res) =>{
-    res.sendFile(path.join(__dirname, "public", "cadastro.html"));
-}) 
 app.get('/login' , (req , res) =>{
     res.sendFile(path.join(__dirname, "public", "login.html"));
+}) 
+app.get('/login/cadastro' , (req , res) =>{
+    res.sendFile(path.join(__dirname, "public", "cadastro.html"));
 }) 
 app.get("/dentistas" ,(req , res) => {
     res.sendFile(path.join(__dirname, "public", "dentistas.html"));  
 });
 app.get("/calendario" ,(req , res) => {
     res.sendFile(path.join(__dirname, "public", "calendario.html"));  
+});
+app.get("/consulta" ,(req , res) => {
+    res.sendFile(path.join(__dirname, "public", "consulta.html"));  
 });
 
 

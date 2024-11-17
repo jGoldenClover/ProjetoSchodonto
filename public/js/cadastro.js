@@ -1,4 +1,4 @@
-import * as supabase from '/Banco/banco.js'
+import * as supabase from '../Banco/banco.js'
 
 const supabasePublicClient = supabase.pegarBanco();
 

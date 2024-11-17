@@ -73,14 +73,3 @@ const userID = localStorage.getItem('userID');
 
 console.log(`Id de usuario é : ${userID}`)
 
-
-// basicamente eu pego toda a informação do usuário e uso o fetch para enviar (usando o POST) para atualizar (por isso o POST) a página e então eu configuro para o valor recebido ser o id de usuário
-fetch(`http://localhost:3000/`) , {
-    // preciso usar o POST para atualizar a informação do site
-    method: 'POST',
-    // defino que a informação que vai chegar é um json
-    // !!!importante --> já que o userID já é uma informação vinda de um json, eu não preciso definir ele como tal. Caso contrário, eu precisaria
-    headers: { 'Content-Type': 'application/json' },
-    // vou passar essa informação pelo body do site
-    body: JSON.stringify({ 'userID': userID })
-}

@@ -7,8 +7,8 @@ const userID = localStorage.getItem('userID');
 if (userID) {
     console.log(`O Id do usuário: ${userID}`);
 } else {
-    document.getElementById('usuarios').innerHTML = `Login necessário`
-    console.log("Usuário não está logado");
+    // document.getElementById('usuarios').innerHTML = `Login necessário`
+    console.alert("Usuário não está logado");
 }
 
 
@@ -16,7 +16,12 @@ if (userID) {
 var consultasDoUsuario = await supabasePublicClient.from('clientes').select('*,consultas!inner(*)').eq('id',  userID)
 
 consultasDoUsuario = consultasDoUsuario.data
-consultasDoUsuario = consultasDoUsuario[0]['consultas']
+if  (!consultasDoUsuario || consultasDoUsuario.length === 0) {
+    window.alert("Sem consultas");
+} else {
+    consultasDoUsuario = consultasDoUsuario[0]['consultas']
+}
+
 
 console.log(consultasDoUsuario)
 
@@ -60,7 +65,8 @@ function atualizarCalendario() {
         console.log(diaSelecionado)
         diaElement.className = 'dia';
         diaElement.setAttribute('id' , diaSelecionado);
-        diaElement.setAttribute('href' , `/consultas/${diaSelecionado}/${userID}`);
+        diaElement.setAttribute('href' , '/consulta.html');
+
         diaElement.textContent = dia;
         diasContainer.appendChild(diaElement);
         diaElement.addEventListener('click' , () => {
