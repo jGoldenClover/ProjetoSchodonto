@@ -13,7 +13,7 @@ app.use(helmet.contentSecurityPolicy({
     // os links default serão entregues pelo próprio arquivo ("self")
       defaultSrc: ["'self'"], 
     // o link de script secundário é o cdn que vai fazer a conexão com o supabase
-      scriptSrc: ["'self'" , "https://cdn.jsdelivr.net"], 
+      scriptSrc: ["'self'" , "https://cdn.jsdelivr.net" , "https://vercel.live"], 
     // o link de css são o do próprio supabase e o de fontes do google
       styleSrc: ["'self'" , "https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
     // o link de outras conexões
