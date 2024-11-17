@@ -66,7 +66,7 @@ async function verificarBanco (dentistaId) {
                 cliente_consulta : clienteConsulta,
                 data_da_consulta : data_da_consulta
                 }]);
-            window.location.href = "/calendario.html";
+            window.location.href = "./calendario.html";
             return;
         })
 
