@@ -13,6 +13,9 @@ if (userID) {
 
 
 var consultasDoUsuario = await supabasePublicClient.from('clientes').select('*,consultas!inner(*)').eq('id',  userID)
+if (!consultasDoUsuario) {
+    window.alert('Login necessário')
+}
 consultasDoUsuario = consultasDoUsuario.data
 consultasDoUsuario = consultasDoUsuario[0]['consultas']
 
