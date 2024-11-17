@@ -7,15 +7,14 @@ const userID = localStorage.getItem('userID');
 if (userID) {
     console.log(`O Id do usuário: ${userID}`);
 } else {
+    document.getElementById('usuarios').innerHTML = `Login necessário`
     console.log("Usuário não está logado");
 }
 
 
 
 var consultasDoUsuario = await supabasePublicClient.from('clientes').select('*,consultas!inner(*)').eq('id',  userID)
-if (!consultasDoUsuario) {
-    window.alert('Login necessário')
-}
+
 consultasDoUsuario = consultasDoUsuario.data
 consultasDoUsuario = consultasDoUsuario[0]['consultas']
 
