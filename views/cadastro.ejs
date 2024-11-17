@@ -1,0 +1,73 @@
+<!DOCTYPE ejs>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favIcon-img.avif"/>
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="header-navegacao">
+          <img src="/img/favIcon-img.avif" alt="" class="header-img">
+      
+          <a href="/" class="header-btn">Home</a>
+          <a href="/dentistas" class="header-btn">Dentistas</a>
+          <a href="/login" class="header-btn">Login</a>
+          <a href="/calendario" class="header-btn">Minhas Consultas</a>
+        </nav>
+      </header>
+
+
+
+      <div class="gambiarra">
+        <div class="cadastro-container">
+            <h1 class="container-h1">Cadastro</h1>
+            <form action="#" class="container-form">
+                
+                <div class="container-input-box">
+                    <input placeholder="Endereço de email" class="container-input" type="email" id="email" name="email" required>
+                </div>
+                    
+                <div class="container-input-box">
+                    <input placeholder="Senha" class="container-input" type="password" id="password" name="password" required>
+
+                    <i class="bi bi-eye-fill" id="bnt-password" ></i>
+                </div>
+
+                <div class="container-input-box">
+                    <input placeholder="Nome Completo" class="container-input" type="text" id="complete_name" name="complete_name" required>
+                </div>
+
+                <div class="container-input-box">
+                    <input placeholder="Nome de Usuário" class="container-input" type="text" id="user_name" name="user_name" required>
+                </div>
+
+                <div class="container-input-box" id="container-dentista_if-box">
+                    <input  class="container-dentista_if" type="checkbox" id="if_dentista" name="if_dentista" > Deseja se cadastrar como dentista?
+                </div>
+
+                <div class="container-input-box" id="condicao_dentista"></div>
+                
+                
+                    <button type="submit" class="container-button"  id="btn-confirm">
+                        <a href='/' class="link-index" >
+                            Entrar
+                        </a>
+                    </button>
+                
+                
+            </form> 
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.46.1/dist/umd/supabase.min.js"></script>
+    <script type="module" src="/js/cadastro.js"></script>
+    <script src="/Banco/mostrarSenha.js"></script>
+
+</body>
+</html>

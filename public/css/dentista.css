@@ -1,0 +1,55 @@
+.container {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: top;
+}
+
+.container-list {
+    padding: 10px 10px 0 10px;
+    border-radius: 2px;
+    border-bottom: 2px #00ffb3 solid;
+    border-left: 2px #00ffb3 solid;
+    color: #000;
+    background: #B0E0E6;
+    margin-top: 100px;  
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+    height: auto;
+
+}
+
+.container-imagem-lista {
+    width: 100px;
+    height: 100px;
+}
+
+.container-list-p {
+    margin-top: 10px;
+}
+
+#name{
+    text-transform: capitalize;
+}
+
+#email {
+    text-transform: lowercase;
+}
+
+.botao-dentista {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+}

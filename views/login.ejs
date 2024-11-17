@@ -1,0 +1,62 @@
+<!DOCTYPE ejs>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" type="image/jpg" href="/img/favIcon-img.avif"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="header-navegacao">
+          <img src="/img/favIcon-img.avif" alt="" class="header-img">
+      
+          <a href="/" class="header-btn">Home</a>
+          <a href="/dentistas" class="header-btn">Dentistas</a>
+          <a href="/login" class="header-btn">Login</a>
+          <a href="/calendario" class="header-btn">Minhas Consultas</a>
+        </nav>
+      </header>
+
+    <div class="gambiarra">
+        <div class="login-container">
+            <h1 class="container-h1">Login</h1>
+            <form action="#" class="container-form">
+                
+                <div class="container-input-box">
+                    <input placeholder="Endereço de email ou nome de usuario" class="container-input" type="text" id="email" name="email" required>
+                </div>
+                    
+                <div class="container-input-box">
+                    <input placeholder="Senha" class="container-input" type="password" id="password" name="password" required>
+
+                    <i class="bi bi-eye-fill" id="bnt-password"></i>
+                </div>
+                
+                <div class="container-link-rdc-cadastro-box">
+                    <a href="/cadastro" class="container-link-rdc-cadastro-link">Não tem uma conta? Cadastre agora</a>
+                </div>
+
+                    
+                    
+                    <a href="/consultas" class="link-index" id="botaoConfirma">
+                        Entrar
+                    </a>
+                    
+                    
+                
+            </form>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.46.1/dist/umd/supabase.min.js"></script>
+    <script type='module' src="/js/login.js"></script>
+    <script type = 'module' src="/Banco/banco.js"></script>
+    <script src="/Banco/mostrarSenha.js"></script>
+
+</body>
+</html>

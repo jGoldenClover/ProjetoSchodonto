@@ -1,0 +1,58 @@
+.calendario {
+    width: 500px;
+    height: auto;
+    margin: 50px auto;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #b3ff00;
+}
+
+.cabecalho .btn {
+    
+    border: none;
+    padding: 7px;
+    background-color: #d6d6d6;
+    cursor: pointer;
+}
+.cabecalho .btn:hover {
+    box-sizing: content-box;
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+    background-color: #b9cfcc;
+    
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    background-color: #B0E0E6;
+}
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #B0E0E6;
+    padding: 5px;
+}
+
+.dia {
+    color: #000;
+    text-decoration: none;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.dia:hover {
+    background-color: #f0f0f0;
+}
+.selecionado {
+    background-color: #007bff;
+    color: white;
+}
+
+

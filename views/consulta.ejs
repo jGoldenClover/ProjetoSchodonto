@@ -1,0 +1,41 @@
+<!DOCTYPE ejs>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favIcon-img.avif"/>
+    <link rel="stylesheet" href="/css/consulta.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="header-navegacao">
+      <img src="/img/favIcon-img.avif" alt="" class="header-img">
+      <a href="/" class="header-btn">Home</a>
+      <a href="/dentistas" class="header-btn">Dentistas</a>
+      <a href="/login" class="header-btn">Login</a>
+      <a href="/calendario" class="header-btn">Minhas Consultas</a>
+    </nav>
+  </header>
+
+  <div class="gambiarra2"></div>
+
+  <section class="section">
+    <div class='section-btn'>
+      <button id="consultaAnterior" class="btn">&lt;</button>
+      <strong> Schodonto </strong>
+      <button id="proximaConsulta" class="btn">&gt;</button>
+      
+    </div>
+    <div class="container" ></div>
+  </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.46.1/dist/umd/supabase.min.js"></script>
+<script type="module" src="/banco/banco.js"></script>
+<script type='module' src="/js/consulta.js"></script>
+
+</body>
+</html>

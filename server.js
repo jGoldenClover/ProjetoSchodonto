@@ -1,0 +1,46 @@
+const express = require('express');
+const app = express();
+const path = require('path')
+const cors = require('cors');
+app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+app.set('view engine' , 'ejs')
+PORT = 3000
+
+// basicamente, toda vez que usar localhost:3000/, vai retornar o index.ejs, que é só o cabeçalho, padrão
+app.get("/" ,(req , res) => {
+    res.render("index")    
+});
+app.get("/cadastro" ,(req , res) => {
+    res.render("cadastro")    
+});
+app.get("/login" ,(req , res) => {
+    res.render("login")    
+});
+app.get("/dentistas" ,(req , res) => {
+    res.render("dentistas")    
+});
+app.get("/calendario" ,(req , res) => {
+    res.render("calendario")    
+});
+
+
+// o router existe para facilitar os links entre as novas páginas, importando os comandos do ./routes/consulta
+const consultasRouter = require('./routes/routes.js')
+
+// a gente importa os códigos de "./routes/consulta", e basicamente, define que apartir de /consultas, o que for digitado , caso corresponda ao que está no "./routes/consulta" , vai acessar essa página específica
+
+// o servidor está localizado no localhost:3000 e eu defino lá em cima que se usar localhost:3000/ eu puxo tudo o que está no index.ejs. no entanto, na página "./routes/consulta", eu defino que se digitado "/" ou "/dia" irá aparecer um texto, aleatório.
+
+// para não acessar a mesma página usando o /, eu (aqui em baixo) defino que tudo que for escrito após /consultas, vai entrar nessas condições. Ou seja, se digitar /consultas/ ou /consultas/dia eu mostro os textos dos caminhos que eu defini no "./routes/consulta"
+app.use('/consultas' , consultasRouter) 
+
+
+
+app.listen(PORT , () => {
+    console.log(`server rodando na porta: ${PORT}`)
+});

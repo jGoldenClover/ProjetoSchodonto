@@ -1,0 +1,200 @@
+.cadastro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:   #b0e0e6;
+    color: #000;
+    margin-top: 200px;
+    width: 500px;
+    padding: 10px;
+}
+
+.container-h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container-form {
+    width: 80%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-input {
+    margin-top: 30px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border-bottom: 1px #000 solid; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    text-indent: 22px;
+    border: none;
+}
+
+.container-input-box {
+    font-size: 20px ;
+    max-width: 100%;
+    width: 100%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+#password {
+    background: url(../img/Cadastro/cadastro-continer-input-password.png) no-repeat scroll 7px 7px #fff ;
+    background-size: 17px;
+}
+#email {
+    background: url(../img/Cadastro/cadastro-container-input-email.png) no-repeat scroll 7px 7px #fff;
+    background-size: 17px;
+}
+#complete_name {
+    background: url(../img/Cadastro/cadastro-container-input-userName.png) no-repeat scroll 7px 7px #fff;
+    background-size: 17px;
+}
+#user_name {
+    background: url(../img/Cadastro/cadastro-container-input-userName.png) no-repeat scroll 7px 7px #fff;
+    background-size: 17px;
+}
+
+#empresa {
+    background: url(../img/Cadastro/cadastro-container-input-empresa.png) no-repeat scroll 7px 7px #fff;
+    background-size: 30px;
+
+    text-indent: 27px;
+}
+#telefone {
+    background: url(../img/Cadastro/cadastro-container-input-telefone.png) no-repeat scroll 7px 7px #fff;
+    background-size: 25px;
+    text-indent: 27px;
+}
+
+#container-dentista_if-box {
+    margin-top: 30px;
+    
+    display: inline;
+    display: flex;
+    justify-content: left;
+}
+
+#condicao_dentista {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dentista_if {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container-input-empresa {
+    margin-top: 30px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border-bottom: 1px #000 solid; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-indent: 22px;
+    border: none;
+}
+.container-input-box-empresa {
+    font-size: 20px ;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-input-box-telefone {
+    font-size: 20px ;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-input-telefone {
+    margin-top: 30px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border-bottom: 1px #000 solid; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-indent: 22px;
+    border: none;
+}
+
+
+.container-button{
+    background-color: #b3ff00; 
+    border: none;
+    color: rgb(43, 43, 43);
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.container-button:hover {
+    background-color: #91ff00; 
+    box-shadow: 0 0 0 2px #fff ;
+}
+
+.link-index {
+    color: #000;
+    /* font-style: none; */
+    text-decoration: none;
+}
+
+
+
+#bnt-password {
+    width: 35px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.container-link-rdc-cadastro-box {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+    color: #0000FF ;   
+    display: flex;
+    position: left; 
+}

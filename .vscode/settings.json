@@ -1,0 +1,49 @@
+{
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "SQL Local Server",
+            "database": "schodonto",
+            "username": "root",
+            "password": "1234567890"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "schodonto",
+            "database": "shocodonto",
+            "username": "root",
+            "password": "1234567890",
+            "connectionTimeout": 30
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql escola",
+            "database": "schodonto",
+            "username": "root",
+            "password": "root"
+        }
+    ]
+}

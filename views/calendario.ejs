@@ -1,0 +1,48 @@
+<!DOCTYPE ejs>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favIcon-img.avif"/>
+    <link rel="stylesheet" href="/css/geral.css">
+    <link rel="stylesheet" href="/css/calendario.css">
+</head>
+<body>
+    
+  <header class="header">
+    <nav class="header-navegacao">
+      <img src="/img/favIcon-img.avif" alt="" class="header-img">
+  
+      <a href="/" class="header-btn">Home</a>
+      <a href="/dentistas" class="header-btn">Dentistas</a>
+      <a href="/login" class="header-btn">Login</a>
+      <a href="/calendario" class="header-btn">Minhas Consultas</a>
+    </nav>
+  </header>
+
+  <div class="calendario">
+    <div class="cabecalho">
+      <button id="mesAnterior" class="btn">&lt;</button>
+      <span id="mes-ano"></span>
+      <button id="proximoMes" class="btn">&gt;</button>
+    </div>
+    <div class="dias-semana">
+      <div>Dom</div>
+      <div>Seg</div>
+      <div>Ter</div>
+      <div>Qua</div>
+      <div>Qui</div>
+      <div>Sex</div>
+      <div>Sáb</div>
+    </div>
+    <div class="dias" id="dias"></div>
+  </div>
+
+
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.46.1/dist/umd/supabase.min.js"></script>
+  <script type='module' src="/js/calendario.js"></script>
+</body>
+</html>
