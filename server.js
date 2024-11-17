@@ -16,18 +16,17 @@ PORT = 3000
 app.get('/' , (req , res) =>{
     res.sendFile(path.join(__dirname, "public", "index.html"));
 }) 
-
-app.get("/cadastro" ,(req , res) => {
-    res.render("cadastro")    
-});
-app.get("/login" ,(req , res) => {
-    res.render("login")    
-});
+app.get('/cadastro' , (req , res) =>{
+    res.sendFile(path.join(__dirname, "public", "cadastro.html"));
+}) 
+app.get('/login' , (req , res) =>{
+    res.sendFile(path.join(__dirname, "public", "login.html"));
+}) 
 app.get("/dentistas" ,(req , res) => {
-    res.render("dentistas")    
+    res.sendFile(path.join(__dirname, "public", "dentistas.html"));  
 });
 app.get("/calendario" ,(req , res) => {
-    res.render("calendario")    
+    res.sendFile(path.join(__dirname, "public", "calendario.html"));  
 });
 
 

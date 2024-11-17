@@ -70,11 +70,6 @@ function atualizarCalendario() {
 
 }
 
-    
-// document.getElementById('diaSelecionado').addEventListener('click' , () => {
-//     localStorage.removeItem('diaSelecionado')
-//     
-// })
 atualizarCalendario();
 
 
