@@ -6,6 +6,13 @@
     align-items: center;
 }
 
+.container p{
+    border: #000 solid 1px;
+    background: #B0E0E6;
+
+    margin-top: 100px;
+    padding: 5px;
+ }
 header {
     position: fixed;
     display: flex;
@@ -49,16 +56,27 @@ header {
 }
 
 .botao-dentista {
-    width: 150px !important;
-    text-align: center;
-    text-decoration: none;
+    width: 100px;
+    height: auto;
     padding: 5px;
-    color: #000;
+}
 
-    
+#diaDigitado {
+    border: 1px #000 solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+    background: #B0E0E6;
+}
+
+.botao-dentista {
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 1px solid #000;
+    border: 1px solid (0, 0, 0, 0.2);
     background: #B0E0E6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 100px;

@@ -5,6 +5,7 @@ const supabasePublicClient = supabase.pegarBanco()
 const container = document.querySelector('.container');
 const containerLista = document.querySelector('.container-list');
 
+
 async function verificarBanco () {
   const response = await supabasePublicClient.from("dentistas").select("*");
   const data = response.data
@@ -17,9 +18,8 @@ async function verificarBanco () {
     const botao_consulta = document.createElement('a')
     botao_consulta.className = ('botao-dentista')
     botao_consulta.setAttribute('id' , data[i]['id'])
-    // botao_consulta.setAttribute('href' , `/dentistaSelecionado/${data[i]['id']}`)
-    // botao_consulta.innerHTML = 'Ver contato'
-
+    botao_consulta.setAttribute('href' , `/cadastrarConsulta.html`)
+    botao_consulta.innerHTML = 'Ver contato'
 
     const nome_li = document.createElement('li');
     nome_li.className=('container-list-p');
@@ -46,11 +46,14 @@ async function verificarBanco () {
 
 
     container.appendChild(ul)
-    
-
-      
-
+  
   }
+  
+  
+
+
   }
     
 verificarBanco()
+
+
