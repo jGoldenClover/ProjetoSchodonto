@@ -18,7 +18,7 @@ async function verificarBanco () {
     const botao_consulta = document.createElement('a')
     botao_consulta.className = ('botao-dentista')
     botao_consulta.setAttribute('id' , data[i]['id'])
-    botao_consulta.setAttribute('href' , `/cadastrarConsulta.html`)
+    botao_consulta.setAttribute('href' , `/ProjetoSchodonto/cadastrarConsulta.html`)
     botao_consulta.innerHTML = 'Ver contato'
 
     const nome_li = document.createElement('li');
