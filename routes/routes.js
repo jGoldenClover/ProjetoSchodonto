@@ -51,7 +51,7 @@ router.use(express.json());
 router.get("/:data/:id" , (req , res) => {
     const consultaData = req.params.data
     const consultaId = req.params.id
-
+    // res.sendFile(path.join(__dirname, "public", "consulta.html"));
     res.render('consulta')
 
     module.exports = consultaData

@@ -3,15 +3,22 @@ const app = express();
 const path = require('path')
 const cors = require('cors');
 app.use(cors());
-const helmet = require("helmet");
 app.use(express.static(path.join(__dirname, 'public')));
 
+const helmet = require("helmet");
+
+// esse helmet funciona como um link secundário para conectar o ejs com os links externos (o supabase , o cdn que usa para conectar o supabase e etc)
 app.use(helmet.contentSecurityPolicy({
     directives: {
-    defaultSrc: ["'self'"], 
-      scriptSrc: ["'self'", "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"], 
-      styleSrc: ["'self'"],
-      imgSrc: ["'self'"], 
+    // os links default serão entregues pelo próprio arquivo ("self")
+      defaultSrc: ["'self'"], 
+    // o link de script secundário é o cdn que vai fazer a conexão com o supabase
+      scriptSrc: ["'self'" , "https://cdn.jsdelivr.net"], 
+    // o link de css são o do próprio supabase e o de fontes do google
+      styleSrc: ["'self'" , "https://cdn.jsdelivr.net", "https://fonts.googleapis.com"],
+    // o link de outras conexões
+      connectSrc: ["'self'" , "https://brioutndycetdzaqsxka.supabase.co"],
+      imgSrc: ["'self'"],
     },
     
 }))
@@ -39,7 +46,8 @@ app.get("/calendario" ,(req , res) => {
 
 
 // o router existe para facilitar os links entre as novas páginas, importando os comandos do ./routes/consulta
-const consultasRouter = require('./routes/routes.js')
+const consultasRouter = require('./routes/routes.js');
+const { connect } = require('http2');
 
 // a gente importa os códigos de "./routes/consulta", e basicamente, define que apartir de /consultas, o que for digitado , caso corresponda ao que está no "./routes/consulta" , vai acessar essa página específica
 

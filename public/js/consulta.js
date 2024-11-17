@@ -3,45 +3,6 @@ import * as supabase from './banco.js'
 const supabasePublicClient = supabase.pegarBanco()
 const userID = localStorage.getItem('userID');
 
-var todosUsuariosCadastrados = []
-
-async function pegarTodosUsuarios (todosUsuariosCadastrados) {
-    let supabasePublicClient = supabase.pegarBanco();
-    
-    const responseUsuarios = await supabasePublicClient.from('clientes').select('*').eq('id' , userID);
-
-    if (responseUsuarios.error) {
-        console.error("Erro ao buscar usuarios:", responseUsuarios.error);
-    } else {
-        todosUsuariosCadastrados.push(responseUsuarios.data);
-    }
-    
-    const responseDentistas = await supabasePublicClient.from('dentistas').select('*')
-
-    if (responseDentistas.error) {
-        console.error("Erro ao buscar dentistas:", responseDentistas.error);
-    } else {
-        todosUsuariosCadastrados.push(responseDentistas.data);
-    }
-    return todosUsuariosCadastrados;
-};
-
-async function definirUsuariosEDentistas () {
-    todosUsuariosCadastrados = await pegarTodosUsuarios(todosUsuariosCadastrados)
-
-    const todosUsuarios = todosUsuariosCadastrados[0];
-    const todosDentistas = todosUsuariosCadastrados[1];
-
-    console.log(todosUsuarios)
-    console.log(todosDentistas)
-};
-
-// definirUsuariosEDentistas()
-
-
-
-
-
 
 const container = document.querySelector('.container');
 var dataConsulta = JSON.parse(localStorage.getItem('diaSelecionado'))
