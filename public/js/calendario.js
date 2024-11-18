@@ -8,7 +8,7 @@ if (userID) {
     console.log(`O Id do usuário: ${userID}`);
 } else {
     // document.getElementById('usuarios').innerHTML = `Login necessário`
-    console.alert("Usuário não está logado");
+    window.alert("Usuário não está logado");
 }
 
 
