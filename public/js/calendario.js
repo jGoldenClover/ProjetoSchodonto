@@ -67,7 +67,7 @@ function atualizarCalendario() {
         console.log(diaSelecionado)
         diaElement.className = 'dia';
         diaElement.setAttribute('id' , diaSelecionado);
-        diaElement.setAttribute('href' , '/consulta.html');
+        diaElement.setAttribute('href' , './consulta.html');
 
         diaElement.textContent = dia;
         diasContainer.appendChild(diaElement);
