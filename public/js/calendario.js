@@ -9,7 +9,7 @@ if (userID) {
 } else {
     // document.getElementById('usuarios').innerHTML = `Login necessário`
     window.alert("Usuário não está logado");
-    window.location.href = "./login.html";
+    window.location.href = "/login.html";
 
 }
 
